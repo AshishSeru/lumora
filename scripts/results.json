@@ -1,0 +1,288 @@
+{
+  "summary": {
+    "questions": 15,
+    "tutorModel": "gpt-5.5",
+    "judgeModel": "gpt-5.4-mini",
+    "ungrounded": {
+      "faithfulness": 4.6,
+      "relevance": 4.93,
+      "groundedness": 4.33
+    },
+    "grounded": {
+      "faithfulness": 4.93,
+      "relevance": 5,
+      "groundedness": 4.87
+    },
+    "general": {
+      "count": 12,
+      "ungroundedGroundedness": 4.83,
+      "groundedGroundedness": 5,
+      "ungroundedFaithfulness": 4.92,
+      "groundedFaithfulness": 4.92
+    },
+    "outOfKnowledge": {
+      "count": 3,
+      "ungroundedGroundedness": 2.33,
+      "groundedGroundedness": 4.33,
+      "ungroundedFaithfulness": 3.33,
+      "groundedFaithfulness": 5
+    }
+  },
+  "rows": [
+    {
+      "id": "q1",
+      "topic": "RAG",
+      "outOfKnowledge": false,
+      "ungrounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "Accurate, directly answers the question, and fully covers retrieval from trusted sources, answering from retrieved text, and reduced hallucination/citations."
+      },
+      "grounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "Accurate, directly answers the question, and fully covers retrieval, source-grounding, and hallucination reduction."
+      }
+    },
+    {
+      "id": "q2",
+      "topic": "Embeddings",
+      "outOfKnowledge": false,
+      "ungrounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "Accurately explains vectors, semantic closeness, and cosine similarity while directly answering the question."
+      },
+      "grounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "Accurate, directly answers the question, and covers all key points clearly."
+      }
+    },
+    {
+      "id": "q3",
+      "topic": "API security",
+      "outOfKnowledge": false,
+      "ungrounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "Accurate, directly answers the question, and covers all required points clearly."
+      },
+      "grounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "Accurate, directly answers the question, and covers all required security and deployment points."
+      }
+    },
+    {
+      "id": "q4",
+      "topic": "Chunking",
+      "outOfKnowledge": false,
+      "ungrounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "Accurate, directly answers the question, and covers splitting, size tradeoffs, and overlap."
+      },
+      "grounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "Accurate, directly answers the question, and covers splitting, size tradeoffs, and overlap."
+      }
+    },
+    {
+      "id": "q5",
+      "topic": "Streaming",
+      "outOfKnowledge": false,
+      "ungrounded": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "groundedness": 4,
+        "note": "Mostly accurate and directly relevant, though it adds extra reasons beyond the key points."
+      },
+      "grounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "Accurate and directly answers the question while covering the key streaming benefits."
+      }
+    },
+    {
+      "id": "q6",
+      "topic": "Prompting",
+      "outOfKnowledge": false,
+      "ungrounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "Accurately explains temperature, notes lower values are more deterministic, and recommends low temperature for factual tasks."
+      },
+      "grounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "Accurately explains temperature and clearly recommends a lower temperature for factual tasks."
+      }
+    },
+    {
+      "id": "q7",
+      "topic": "Evaluation",
+      "outOfKnowledge": false,
+      "ungrounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "It directly answers with a representative test set, scoring criteria like groundedness/relevance, and tracking scores over time."
+      },
+      "grounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "It accurately explains using an eval set, scoring key metrics, and tracking scores over time."
+      }
+    },
+    {
+      "id": "q8",
+      "topic": "LLM basics",
+      "outOfKnowledge": false,
+      "ungrounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "It accurately explains next-token prediction, lack of real lookup, and the possibility of confident errors."
+      },
+      "grounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "Accurate, directly answers the question, and covers all key points clearly."
+      }
+    },
+    {
+      "id": "q9",
+      "topic": "Reliability",
+      "outOfKnowledge": false,
+      "ungrounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "Accurate, directly relevant, and it thoroughly covers retrieval/RAG, abstention, citations, and lower temperature."
+      },
+      "grounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "It accurately covers all key points and adds relevant concrete tactics without inventing unsupported claims."
+      }
+    },
+    {
+      "id": "q10",
+      "topic": "Deployment",
+      "outOfKnowledge": false,
+      "ungrounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "It accurately explains the GitHub-to-Vercel workflow and includes adding environment variables in Vercel."
+      },
+      "grounded": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "It correctly covers the deployment steps and adds a bit of extra guidance, with no major inaccuracies."
+      }
+    },
+    {
+      "id": "q11",
+      "topic": "Next.js",
+      "outOfKnowledge": false,
+      "ungrounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "Accurate and directly addresses the differences, including 'use client', interactivity, and server-by-default behavior."
+      },
+      "grounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "Accurate, directly answers the question, and covers all required key points."
+      }
+    },
+    {
+      "id": "q12",
+      "topic": "Prompting",
+      "outOfKnowledge": false,
+      "ungrounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 4,
+        "note": "Accurate and directly relevant, though it adds extra prompt elements beyond the required key points."
+      },
+      "grounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "It accurately covers the required parts and adds a few helpful extras."
+      }
+    },
+    {
+      "id": "q13",
+      "topic": "Lumora internals",
+      "outOfKnowledge": true,
+      "ungrounded": {
+        "faithfulness": 2,
+        "relevance": 4,
+        "groundedness": 1,
+        "note": "It answers generally about RAG, but invents a Postgres/pgvector setup and misses the local generated file, in-memory cosine search, and Vercel/no-external-service rationale."
+      },
+      "grounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 5,
+        "note": "It directly states the local embedded index, in-memory cosine search, and the rationale of simplicity/free Vercel/no external service."
+      }
+    },
+    {
+      "id": "q14",
+      "topic": "Lumora internals",
+      "outOfKnowledge": true,
+      "ungrounded": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "groundedness": 3,
+        "note": "It captures graceful degradation, but misses the specific browser speech fallback and glowing orb behavior."
+      },
+      "grounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 4,
+        "note": "It answers directly and correctly, though it omits the explicit graceful-degradation point."
+      }
+    },
+    {
+      "id": "q15",
+      "topic": "Lumora internals",
+      "outOfKnowledge": true,
+      "ungrounded": {
+        "faithfulness": 4,
+        "relevance": 5,
+        "groundedness": 3,
+        "note": "It correctly ties Lumora to light and a glowing orb, but it invents etymological details and misses the specific warm tagline framing."
+      },
+      "grounded": {
+        "faithfulness": 5,
+        "relevance": 5,
+        "groundedness": 4,
+        "note": "Accurate and directly on point, though it omits the warm light theme/tagline detail."
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #FDF8F3;
+  color: #2B2520;
+}
+
+/* The warm "dawn glow" — a soft ember light low on the page that the whole
+   product is built around. Sits behind content, never interactive. */
+.lumora-aurora {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.lumora-aurora::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -42%;
+  width: 130vw;
+  height: 90vh;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(232, 116, 59, 0.16) 0%,
+    rgba(242, 177, 121, 0.12) 38%,
+    rgba(253, 248, 243, 0) 70%
+  );
+  filter: blur(8px);
+}
+
+/* Faint warm specks instead of stars, very subtle on cream */
+.lumora-stars {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 22% 28%, rgba(199, 83, 30, 0.18), transparent),
+    radial-gradient(1px 1px at 72% 18%, rgba(199, 83, 30, 0.12), transparent),
+    radial-gradient(1px 1px at 42% 72%, rgba(199, 83, 30, 0.14), transparent),
+    radial-gradient(1px 1px at 84% 62%, rgba(199, 83, 30, 0.10), transparent);
+  opacity: 0.5;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FDF8F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #F3D9C4;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E89A5B;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
